@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { useApp } from "@/hooks/use-app";
 import { translations } from "@/lib/translations";
-import { Building2, Facebook, Instagram, Twitter } from "lucide-react";
+import { Facebook, Instagram, Twitter } from "lucide-react";
 import { Button } from "../ui/button";
+import Logo from "@/components/logo";
 
 export default function Footer() {
   const { language } = useApp();
@@ -26,48 +27,66 @@ export default function Footer() {
 
   return (
     <footer className="bg-secondary text-secondary-foreground">
-      <div className="container mx-auto px-4 pt-16 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-8">
-            {/* About */}
-            <div className="space-y-4">
-                <div className="flex items-center space-x-2 mb-4">
-                    <Building2 className="h-8 w-8 text-primary" />
-                    <span className="font-bold text-2xl font-headline">Orlando Global</span>
+      <div className="container mx-auto px-4 pt-8 md:pt-16 pb-6">
+        {/* Mobile-first design with better spacing */}
+        <div className="space-y-8 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8 lg:gap-12">
+            {/* About - Full width on mobile */}
+            <div className="space-y-3 md:col-span-2 lg:col-span-1">
+                <div className="flex justify-center md:justify-start mb-4">
+                    <Logo width={160} height={48} className="md:w-[200px] md:h-[60px]" />
                 </div>
-                <p className="text-muted-foreground">{t.footer.about}</p>
+                <p className="text-muted-foreground text-sm md:text-base text-center md:text-left leading-relaxed">
+                    {t.footer.about}
+                </p>
             </div>
 
-            {/* Quick Links */}
-            <div className="space-y-4">
-                <h3 className="font-bold text-lg font-headline">{t.footer.quickLinks}</h3>
-                <nav className="flex flex-col space-y-2">
+            {/* Quick Links - Compact on mobile */}
+            <div className="space-y-3">
+                <h3 className="font-bold text-base md:text-lg font-headline text-center md:text-left">
+                    {t.footer.quickLinks}
+                </h3>
+                <nav className="flex flex-wrap justify-center md:justify-start md:flex-col gap-2 md:gap-0 md:space-y-2">
                     {navLinks.map((link) => (
-                        <Link key={link.href} href={link.href} className="text-muted-foreground hover:text-primary transition-colors w-fit">
+                        <Link 
+                            key={link.href} 
+                            href={link.href} 
+                            className="text-muted-foreground hover:text-primary transition-colors text-sm md:text-base px-2 md:px-0 py-1 md:py-0 rounded-md hover:bg-primary/10 md:hover:bg-transparent w-fit"
+                        >
                             {link.label}
                         </Link>
                     ))}
                 </nav>
             </div>
 
-            {/* Contact */}
-            <div className="space-y-4">
-                 <h3 className="font-bold text-lg font-headline">{t.footer.contactUs}</h3>
-                 <div className="text-muted-foreground space-y-2">
-                    <p>Kyrenia, North Cyprus</p>
-                    <p>+90 555 123 4567</p>
-                    <p>info@orlandoglobal.com</p>
-                 </div>
-                 <div className="flex space-x-2 pt-2">
+            {/* Contact - Compact layout */}
+            <div className="space-y-3">
+                <h3 className="font-bold text-base md:text-lg font-headline text-center md:text-left">
+                    {t.footer.contactUs}
+                </h3>
+                <div className="text-muted-foreground space-y-1 text-center md:text-left">
+                    <p className="text-sm md:text-base">Kyrenia, North Cyprus</p>
+                    <p className="text-sm md:text-base">+90 555 123 4567</p>
+                    <p className="text-sm md:text-base">info@orlandoglobal.com</p>
+                </div>
+                <div className="flex justify-center md:justify-start space-x-1 pt-2">
                     {socialLinks.map((link, i) => (
-                        <Button key={i} asChild variant="ghost" size="icon" className="text-muted-foreground hover:text-primary hover:bg-primary/10">
-                            <a href={link.href} target="_blank" rel="noopener noreferrer">{link.icon}</a>
+                        <Button 
+                            key={i} 
+                            asChild 
+                            variant="ghost" 
+                            size="icon" 
+                            className="text-muted-foreground hover:text-primary hover:bg-primary/10 h-8 w-8 md:h-10 md:w-10"
+                        >
+                            <a href={link.href} target="_blank" rel="noopener noreferrer">
+                                {link.icon}
+                            </a>
                         </Button>
                     ))}
-                 </div>
+                </div>
             </div>
 
-            {/* Map */}
-            <div className="space-y-4">
+            {/* Map - Hidden on mobile, shown on larger screens */}
+            <div className="hidden md:block space-y-3">
                 <h3 className="font-bold text-lg font-headline">{t.footer.ourLocation}</h3>
                 <div className="overflow-hidden rounded-lg shadow-md">
                     <iframe 
@@ -83,7 +102,26 @@ export default function Footer() {
                 </div>
             </div>
         </div>
-        <div className="border-t pt-8 mt-8 text-center text-muted-foreground text-sm">
+        
+        {/* Mobile map section - shown only on mobile */}
+        <div className="md:hidden mt-6 space-y-3">
+            <h3 className="font-bold text-base font-headline text-center">{t.footer.ourLocation}</h3>
+            <div className="overflow-hidden rounded-lg shadow-md">
+                <iframe 
+                    src={`https://maps.google.com/maps?q=35.337,33.319&z=15&output=embed&t=q&hl=${language}`}
+                    width="100%" 
+                    height="150" 
+                    style={{border:0}} 
+                    allowFullScreen
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Orlando Global Location"
+                ></iframe>
+            </div>
+        </div>
+        
+        {/* Copyright */}
+        <div className="border-t pt-4 md:pt-6 mt-6 md:mt-8 text-center text-muted-foreground text-xs md:text-sm">
             <p>&copy; {new Date().getFullYear()} Orlando Global. {t.footer.rights}</p>
         </div>
       </div>

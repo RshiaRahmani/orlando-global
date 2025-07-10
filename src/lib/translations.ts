@@ -32,6 +32,18 @@ export const translations = {
         title: 'Starlux Orlando Mall',
         description: 'A premium destination in Kyrenia featuring a cinema, the "Las Vegas" bar, fine dining, a kids room, and a VR arena.',
         galleryTitle: 'Starlux Gallery',
+        location: {
+          title: 'Visit Us',
+          address: 'Starlux Orlando Mall, Kyrenia',
+          details: 'Located in the vibrant center of Kyrenia, offering premium entertainment and dining experiences.',
+          hours: 'Open Daily: 9:00 AM - 11:00 PM',
+          contact: 'Contact for reservations and events',
+          labels: {
+            address: 'Address',
+            hours: 'Hours',
+            contact: 'Contact'
+          }
+        },
         cinema: {
           title: 'Ultimate Cinema Experience',
           description: 'Immerse yourself in the magic of movies in our state-of-the-art cinema. Featuring crystal-clear digital projection, Dolby Atmos sound, and luxurious reclining seats, every screening becomes a memorable event. Catch the latest blockbusters and timeless classics in unparalleled comfort.'
@@ -58,6 +70,18 @@ export const translations = {
         description: 'Your cozy corner in Famagusta for the finest coffee and a curated shopping experience.',
         features: ['Artisanal Coffee Blends', 'Freshly Baked Pastries', 'Curated Lifestyle Products', 'Relaxing Ambiance'],
         galleryTitle: 'Shop & Coffee Gallery',
+        location: {
+          title: 'Visit Us',
+          address: 'Orlando Shop & Coffee, Famagusta',
+          details: 'A cozy retreat in Famagusta where you can enjoy premium coffee and browse unique lifestyle products.',
+          hours: 'Open Daily: 7:00 AM - 9:00 PM',
+          contact: 'Contact for special orders and events',
+          labels: {
+            address: 'Address',
+            hours: 'Hours',
+            contact: 'Contact'
+          }
+        },
         events: {
             title: 'Community & Events',
             description: 'We\'re more than just a coffee shop; we\'re a community hub. Join us for our regular events, including live acoustic music nights, coffee tasting workshops, and local art showcases. Follow our social media to stay updated on the latest happenings!'
@@ -67,7 +91,19 @@ export const translations = {
         title: 'CyberX Gaming Club',
         description: 'The ultimate gaming hub in Kyrenia with high-end PCs, popular titles, and a competitive atmosphere.',
         features: ['High-Performance Gaming PCs', 'Latest & Popular Games', 'Regular Tournaments', 'Comfortable Gaming Stations'],
-        galleryTitle: 'CyberX Gallery'
+        galleryTitle: 'CyberX Gallery',
+        location: {
+          title: 'Visit Us',
+          address: 'CyberX Gaming Club, Kyrenia',
+          details: 'Located in the heart of Kyrenia, our gaming club is easily accessible and features state-of-the-art facilities.',
+          hours: 'Open Daily: 10:00 AM - 2:00 AM',
+          contact: 'Contact for more information',
+          labels: {
+            address: 'Address',
+            hours: 'Hours',
+            contact: 'Contact'
+          }
+        }
       },
     },
     contact: {
@@ -130,6 +166,18 @@ export const translations = {
         title: 'Starlux Orlando Mall',
         description: 'Премиальное место в Киринии с кинотеатром, баром "Лас-Вегас", изысканным рестораном, детской комнатой и VR-ареной.',
         galleryTitle: 'Галерея Starlux',
+        location: {
+          title: 'Посетите Нас',
+          address: 'Starlux Orlando Mall, Кирения',
+          details: 'Расположен в оживленном центре Киринии, предлагая премиальные развлечения и рестораны.',
+          hours: 'Открыто ежедневно: 9:00 - 23:00',
+          contact: 'Свяжитесь для бронирования и мероприятий',
+          labels: {
+            address: 'Адрес',
+            hours: 'Часы работы',
+            contact: 'Контакт'
+          }
+        },
         cinema: {
           title: 'Незабываемый Киноопыт',
           description: 'Погрузитесь в магию кино в нашем современном кинотеатре. С кристально чистым цифровым изображением, звуком Dolby Atmos и роскошными креслами с откидной спинкой каждый сеанс становится незабываемым событием. Смотрите последние блокбастеры и вечную классику в непревзойденном комфорте.'
@@ -156,6 +204,18 @@ export const translations = {
         description: 'Ваш уютный уголок в Фамагусте с лучшим кофе и тщательно подобранным ассортиментом товаров.',
         features: ['Авторские кофейные смеси', 'Свежая выпечка', 'Тщательно подобранные товары для жизни', 'Расслабляющая атмосфера'],
         galleryTitle: 'Галерея Магазина и Кофе',
+        location: {
+          title: 'Посетите Нас',
+          address: 'Orlando Магазин и Кофе, Фамагуста',
+          details: 'Уютное убежище в Фамагусте, где вы можете насладиться превосходным кофе и просмотреть уникальные товары для жизни.',
+          hours: 'Открыто ежедневно: 7:00 - 21:00',
+          contact: 'Свяжитесь для специальных заказов и мероприятий',
+          labels: {
+            address: 'Адрес',
+            hours: 'Часы работы',
+            contact: 'Контакт'
+          }
+        },
         events: {
           title: 'Сообщество и События',
           description: 'Мы больше, чем просто кофейня; мы — центр сообщества. Присоединяйтесь к нашим регулярным мероприятиям, включая вечера живой акустической музыки, мастер-классы по дегустации кофе и выставки местных художников. Следите за нами в социальных сетях, чтобы быть в курсе последних событий!'
@@ -165,8 +225,20 @@ export const translations = {
         title: 'Игровой Клуб CyberX',
         description: 'Лучший игровой центр в Киринии с мощными ПК, популярными играми и соревновательной атмосферой.',
         features: ['Высокопроизводительные игровые ПК', 'Новейшие и популярные игры', 'Регулярные турниры', 'Удобные игровые места'],
-        galleryTitle: 'Галерея CyberX'
-      },
+        galleryTitle: 'Галерея CyberX',
+        location: {
+          title: 'Посетите Нас',
+          address: 'Игровой Клуб CyberX, Кирения',
+          details: 'Расположен в сердце Киринии, наш игровой клуб легко доступен и оснащен самым современным оборудованием.',
+          hours: 'Открыто ежедневно: 10:00 - 2:00',
+          contact: 'Свяжитесь для дополнительной информации',
+          labels: {
+            address: 'Адрес',
+            hours: 'Часы работы',
+            contact: 'Контакт'
+          }
+        }
+      }
     },
     contact: {
       title: 'Свяжитесь с Нами',
@@ -200,7 +272,7 @@ export const translations = {
   tr: {
     nav: {
       home: 'Anasayfa',
-      starlux: 'Starlux AVM',
+      starlux: 'Starlux Mall',
       shopAndCoffee: 'Mağaza & Kahve',
       cyberX: 'CyberX Gaming',
       contact: 'İletişim',
@@ -228,6 +300,18 @@ export const translations = {
         title: 'Starlux Orlando AVM',
         description: 'Girne\'de sinema, "Las Vegas" barı, kaliteli restoran, çocuk odası ve VR arenası bulunan birinci sınıf bir mekan.',
         galleryTitle: 'Starlux Galerisi',
+        location: {
+          title: 'Bizi Ziyaret Edin',
+          address: 'Starlux Orlando AVM, Girne',
+          details: 'Girne\'nin canlı merkezinde bulunan, premium eğlence ve yemek deneyimleri sunan mekanımız.',
+          hours: 'Her Gün Açık: 09:00 - 23:00',
+          contact: 'Rezervasyon ve etkinlikler için iletişim',
+          labels: {
+            address: 'Adres',
+            hours: 'Çalışma Saatleri',
+            contact: 'İletişim'
+          }
+        },
         cinema: {
           title: 'Mükemmel Sinema Deneyimi',
           description: 'Son teknoloji sinemamızda filmlerin büyüsüne kapılın. Kristal netliğinde dijital projeksiyon, Dolby Atmos ses sistemi ve lüks yatar koltuklar ile her gösterim unutulmaz bir etkinliğe dönüşüyor. En yeni gişe rekortmenlerini ve zamansız klasikleri benzersiz bir konforla izleyin.'
@@ -254,6 +338,18 @@ export const translations = {
         description: 'Gazimağusa\'da en iyi kahve ve özenle seçilmiş bir alışveriş deneyimi için rahat köşeniz.',
         features: ['Özel Kahve Harmanları', 'Taze Pişmiş Pastalar', 'Özenle Seçilmiş Yaşam Tarzı Ürünleri', 'Rahatlatıcı Ortam'],
         galleryTitle: 'Mağaza & Kahve Galerisi',
+        location: {
+          title: 'Bizi Ziyaret Edin',
+          address: 'Orlando Mağaza & Kahve, Gazimağusa',
+          details: 'Gazimağusa\'da premium kahve tadabileceğiniz ve benzersiz yaşam tarzı ürünlerine göz atabileceğiniz rahat bir sığınak.',
+          hours: 'Her Gün Açık: 07:00 - 21:00',
+          contact: 'Özel siparişler ve etkinlikler için iletişim',
+          labels: {
+            address: 'Adres',
+            hours: 'Çalışma Saatleri',
+            contact: 'İletişim'
+          }
+        },
         events: {
             title: 'Topluluk ve Etkinlikler',
             description: 'Biz bir kahve dükkanından daha fazlasıyız; bir topluluk merkeziyiz. Canlı akustik müzik geceleri, kahve tadım atölyeleri ve yerel sanat sergileri gibi düzenli etkinliklerimize katılın. En son gelişmelerden haberdar olmak için sosyal medyamızı takip edin!'
@@ -263,7 +359,19 @@ export const translations = {
         title: 'CyberX Oyun Kulübü',
         description: 'Girne\'de üst düzey bilgisayarlar, popüler oyunlar ve rekabetçi bir atmosfere sahip nihai oyun merkezi.',
         features: ['Yüksek Performanslı Oyun Bilgisayarları', 'En Yeni ve Popüler Oyunlar', 'Düzenli Turnuvalar', 'Konforlu Oyun İstasyonları'],
-        galleryTitle: 'CyberX Galerisi'
+        galleryTitle: 'CyberX Galerisi',
+        location: {
+          title: 'Bizi Ziyaret Edin',
+          address: 'CyberX Oyun Kulübü, Girne',
+          details: 'Girne\'nin kalbinde bulunan oyun kulübümüz kolayca erişilebilir ve son teknoloji tesislere sahiptir.',
+          hours: 'Her Gün Açık: 10:00 - 02:00',
+          contact: 'Daha fazla bilgi için iletişim',
+          labels: {
+            address: 'Adres',
+            hours: 'Çalışma Saatleri',
+            contact: 'İletişim'
+          }
+        }
       },
     },
     contact: {

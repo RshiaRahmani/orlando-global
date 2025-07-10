@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, Building2 } from 'lucide-react';
+import { Menu } from 'lucide-react';
 
 import { useApp } from '@/hooks/use-app';
 import { translations } from '@/lib/translations';
@@ -11,6 +11,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import LanguageSwitcher from '@/components/language-switcher';
 import ThemeToggle from '@/components/theme-toggle';
+import Logo from '@/components/logo';
 
 export default function Header() {
   const { language } = useApp();
@@ -32,7 +33,7 @@ export default function Header() {
           <Link
             href={link.href}
             className={cn(
-              'transition-colors hover:text-primary',
+              'transition-colors hover:text-zinc-800 ',
               pathname === link.href ? 'text-primary font-semibold' : 'text-muted-foreground'
             )}
           >
@@ -47,8 +48,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Building2 className="h-6 w-6 text-primary" />
-          <span className="font-bold font-headline">Orlando Global</span>
+          <Logo width={120} height={36} />
         </Link>
         <div className="hidden md:flex flex-grow items-center space-x-2">
           <NavLinkItems />

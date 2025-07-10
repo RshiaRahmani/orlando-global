@@ -3,6 +3,7 @@
 import type { ReactNode } from 'react';
 import { createContext, useEffect, useState } from 'react';
 import type { Language } from '@/lib/translations';
+import GSAPManager from '@/lib/gsap-manager';
 
 type Theme = 'light' | 'dark';
 
@@ -19,6 +20,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>('light');
   const [language, setLanguage] = useState<Language>('en');
   const [isMounted, setIsMounted] = useState(false);
+  const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
@@ -41,16 +43,35 @@ export function AppProvider({ children }: { children: ReactNode }) {
     } else {
       setLanguage('en');
     }
+    
+    setIsInitialized(true);
   }, []);
 
   useEffect(() => {
-    if (isMounted) {
+    if (isMounted && isInitialized) {
       const root = window.document.documentElement;
-      root.classList.remove('light', 'dark');
-      root.classList.add(theme);
-      localStorage.setItem('theme', theme);
+      
+      const applyTheme = () => {
+        root.classList.remove('light', 'dark');
+        root.classList.add(theme);
+        localStorage.setItem('theme', theme);
+        root.style.colorScheme = theme;
+      };
+
+      // Apply theme immediately for first load, with minimal delay for subsequent changes
+      if (!isInitialized) {
+        applyTheme();
+      } else {
+        // Small delay only for user-initiated theme changes to sync with animation
+        const isUserChange = localStorage.getItem('theme') !== theme;
+        if (isUserChange) {
+          setTimeout(applyTheme, 150);
+        } else {
+          applyTheme();
+        }
+      }
     }
-  }, [theme, isMounted]);
+  }, [theme, isMounted, isInitialized]);
 
   useEffect(() => {
     if (isMounted) {
@@ -65,7 +86,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     setLanguage,
   };
 
-  if (!isMounted) {
+  if (!isMounted || !isInitialized) {
     return null; // Avoid rendering children until client-side state is determined
   }
 

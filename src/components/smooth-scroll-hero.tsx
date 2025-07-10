@@ -1,5 +1,6 @@
 'use client';
 import { useEffect } from 'react';
+import Logo from '@/components/logo';
 
 export default function SmoothScrollHero() {
   useEffect(() => {
@@ -81,23 +82,15 @@ export default function SmoothScrollHero() {
   return (
     <section className="hero-section">
       <div className="hero-content">
-        <h1 className="hero-title">
-          Orlando Global
+        <div className="hero-title">
+          <Logo width={600} height={180} className="hero-logo mb-16" />
           <svg 
             className="title-underline" 
             viewBox="0 0 842.14 500" 
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path 
-              className="draw-path"
-              d="M336.2,130.05C261.69,118,16.52,122,20.65,244.29c4.17,123,484.3,299.8,734.57,108.37,244-186.65-337.91-311-546.54-268.47" 
-              fill="none" 
-              stroke="#8486aa" 
-              strokeWidth="8" 
-            />
           </svg>
-        </h1>
-        <p className="hero-subtitle">Hub</p>
+        </div>
       </div>
       
       <div className="hero-images">
@@ -115,16 +108,16 @@ export default function SmoothScrollHero() {
         />
         <img 
           className="parallax-img"
-          data-speed="1.2"
-          src="https://images.unsplash.com/photo-1551376347-075b0121a65b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODM2NTQ5MTE&ixlib=rb-4.0.3&q=80&w=400"
+          data-speed="1.0"
+          src="/assets/gallery/cyberx/cover.jpg"
           alt="Orlando Global Hub"
         />
-        <img 
+        {/* <img 
           className="parallax-img"
           data-speed="0.8"
           src="https://images.unsplash.com/photo-1500817487388-039e623edc21?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODM2NTQ5MTE&ixlib=rb-4.0.3&q=80&w=400"
           alt="Orlando Global Hub"
-        />
+        /> */}
       </div>
 
       <style jsx>{`
@@ -138,7 +131,7 @@ export default function SmoothScrollHero() {
           align-items: center;
           justify-content: center;
           position: relative;
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          // background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
         
         .hero-content {
@@ -149,15 +142,17 @@ export default function SmoothScrollHero() {
         }
         
         .hero-title {
-          font-family: 'Unbounded', sans-serif;
-          font-size: clamp(4rem, 10vw, 10rem);
-          font-weight: 700;
-          color: #fff;
-          text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-          margin: 0;
           position: relative;
-          text-transform: uppercase;
           line-height: 1.1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .hero-logo {
+          filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.7));
+          max-width: 90vw;
+          height: auto;
         }
         
         .title-underline {
@@ -192,16 +187,19 @@ export default function SmoothScrollHero() {
         
         .parallax-img {
           width: 100%;
-          height: 300px;
+          height: 600px;
           object-fit: cover;
           border-radius: 12px;
           box-shadow: 0 10px 30px rgba(0,0,0,0.3);
           transition: transform 0.3s ease;
           will-change: transform;
+          -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+          filter: grayscale(100%);
+          
         }
         
         .parallax-img:hover {
-          transform: scale(1.05) !important;
+          transform: scale(1.0) !important;
         }
         
         @media (max-width: 768px) {

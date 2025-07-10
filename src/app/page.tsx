@@ -34,7 +34,7 @@ export default function Home() {
       description: t.branches.cyberX.description,
       href: "/cyberx-gaming",
       icon: <Gamepad2 className="w-8 h-8 text-primary" />,
-      image: "https://placehold.co/600x400.png",
+      image: "/assets/gallery/cyberx/image.png",
       imageHint: "gaming computers neon",
     },
   ];

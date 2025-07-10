@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import Logo from '@/components/logo';
 
 interface LoadingScreenProps {
   loading: boolean;
@@ -13,8 +14,8 @@ export default function LoadingScreen({ loading }: LoadingScreenProps) {
       )}
     >
       <div className="text-center">
-        <div className="font-headline text-4xl font-bold tracking-wider text-primary animate-pulse">
-          Orlando Global
+        <div className="animate-pulse">
+          <Logo width={300} height={90} />
         </div>
       </div>
     </div>
