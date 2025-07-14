@@ -18,7 +18,7 @@ export default function Home() {
       description: t.branches.starlux.description,
       href: "/starlux-mall",
       icon: <Building2 className="w-8 h-8 text-primary" />,
-      image: "https://placehold.co/600x400.png",
+      image: "/assets/gallery/starlux/1.jpg",
       imageHint: "modern mall interior",
     },
     {
@@ -26,7 +26,7 @@ export default function Home() {
       description: t.branches.shopAndCoffee.description,
       href: "/shop-and-coffee",
       icon: <Coffee className="w-8 h-8 text-primary" />,
-      image: "https://placehold.co/600x400.png",
+      image: "/assets/gallery/shopandcoffee/2.jpg",
       imageHint: "cozy coffee shop",
     },
     {

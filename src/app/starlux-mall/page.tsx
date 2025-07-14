@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Masonry from '@/components/masonry';
 import GoogleMap from '@/components/google-map';
 import ScrollReveal from '@/components/scroll-reveal';
+import ScrollImage from '@/components/scroll-image';
 import { useApp } from '@/hooks/use-app';
 import { translations } from '@/lib/translations';
 import { Clapperboard, UtensilsCrossed, Martini, ToyBrick, Orbit, MapPin, Clock, Phone } from 'lucide-react';
@@ -16,89 +17,90 @@ export default function StarluxMallPage() {
       icon: <Clapperboard className="w-10 h-10 text-primary" />,
       title: t.cinema.title,
       description: t.cinema.description,
-      image: 'https://placehold.co/600x500.png',
+      image: '/assets/gallery/starlux/2.jpg',
       imageHint: 'luxury cinema seats'
     },
     {
       icon: <UtensilsCrossed className="w-10 h-10 text-primary" />,
       title: t.restaurant.title,
       description: t.restaurant.description,
-      image: 'https://placehold.co/600x500.png',
+      image: '/assets/gallery/starlux/41.jpg',
       imageHint: 'fine dining restaurant'
     },
     {
       icon: <Martini className="w-10 h-10 text-primary" />,
       title: t.lasVegasBar.title,
       description: t.lasVegasBar.description,
-      image: 'https://placehold.co/600x500.png',
+      image: '/assets/gallery/starlux/23.jpg',
       imageHint: 'stylish cocktail bar'
     },
     {
       icon: <ToyBrick className="w-10 h-10 text-primary" />,
       title: t.kidsRoom.title,
       description: t.kidsRoom.description,
-      image: 'https://placehold.co/600x500.png',
+      image: '/assets/gallery/starlux/11.jpg',
       imageHint: 'kids indoor playground'
     },
     {
       icon: <Orbit className="w-10 h-10 text-primary" />,
       title: t.vrArena.title,
       description: t.vrArena.description,
-      image: 'https://placehold.co/600x500.png',
+      image: '/assets/gallery/starlux/7.jpg',
       imageHint: 'person wearing vr headset'
     },
   ];
 
   const galleryImages = [
-    { 
-      id: '1', 
-      img: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop', 
-      height: 400, 
-      url: '#' 
-    },
-    { 
-      id: '2', 
-      img: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&h=600&fit=crop', 
-      height: 600, 
-      url: '#' 
-    },
-    { 
-      id: '3', 
-      img: 'https://images.unsplash.com/photo-1551218808-94e220e084d2?w=600&h=500&fit=crop', 
-      height: 500, 
-      url: '#' 
-    },
-    { 
-      id: '4', 
-      img: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&h=450&fit=crop', 
-      height: 450, 
-      url: '#' 
-    },
-    { 
-      id: '5', 
-      img: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=550&fit=crop', 
-      height: 550, 
-      url: '#' 
-    },
-    { 
-      id: '6', 
-      img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop', 
-      height: 400, 
-      url: '#' 
-    },
-    { 
-      id: '7', 
-      img: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=650&fit=crop', 
-      height: 650, 
-      url: '#' 
-    },
-    { 
-      id: '8', 
-      img: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=600&h=480&fit=crop', 
-      height: 480, 
-      url: '#' 
-    },
+    { id: '1', img: '/assets/gallery/starlux/1.jpg', height: 400, url: '#' },
+    { id: '2', img: '/assets/gallery/starlux/2.jpg', height: 500, url: '#' },
+    { id: '3', img: '/assets/gallery/starlux/3.jpg', height: 400, url: '#' },
+    { id: '4', img: '/assets/gallery/starlux/4.jpg', height: 450, url: '#' },
+    { id: '5', img: '/assets/gallery/starlux/5.jpg', height: 550, url: '#' },
+    { id: '6', img: '/assets/gallery/starlux/6.jpg', height: 400, url: '#' },
+    { id: '7', img: '/assets/gallery/starlux/7.jpg', height: 650, url: '#' },
+    { id: '8', img: '/assets/gallery/starlux/8.jpg', height: 480, url: '#' },
+    { id: '9', img: '/assets/gallery/starlux/9.jpg', height: 500, url: '#' },
+    { id: '10', img: '/assets/gallery/starlux/10.jpg', height: 600, url: '#' },
+    { id: '11', img: '/assets/gallery/starlux/11.jpg', height: 550, url: '#' },
+    { id: '12', img: '/assets/gallery/starlux/12.jpg', height: 500, url: '#' },
+    { id: '13', img: '/assets/gallery/starlux/13.jpg', height: 400, url: '#' },
+    { id: '14', img: '/assets/gallery/starlux/14.jpg', height: 450, url: '#' },
+    { id: '15', img: '/assets/gallery/starlux/15.jpg', height: 550, url: '#' },
+    { id: '16', img: '/assets/gallery/starlux/16.jpg', height: 500, url: '#' },
+    { id: '17', img: '/assets/gallery/starlux/17.jpg', height: 600, url: '#' },
+    { id: '18', img: '/assets/gallery/starlux/18.jpg', height: 550, url: '#' },
+    { id: '19', img: '/assets/gallery/starlux/19.jpg', height: 500, url: '#' },
+    { id: '20', img: '/assets/gallery/starlux/20.jpg', height: 600, url: '#' },
+    { id: '21', img: '/assets/gallery/starlux/21.jpg', height: 550, url: '#' },
+    { id: '22', img: '/assets/gallery/starlux/22.jpg', height: 500, url: '#' },
+    { id: '23', img: '/assets/gallery/starlux/23.jpg', height: 600, url: '#' },
+    { id: '24', img: '/assets/gallery/starlux/24.jpg', height: 550, url: '#' },
+    { id: '25', img: '/assets/gallery/starlux/25.jpg', height: 500, url: '#' },
+    { id: '26', img: '/assets/gallery/starlux/26.jpg', height: 600, url: '#' },
+    { id: '29', img: '/assets/gallery/starlux/29.jpg', height: 450, url: '#' },
+    { id: '31', img: '/assets/gallery/starlux/31.jpg', height: 500, url: '#' },
+    { id: '32', img: '/assets/gallery/starlux/32.jpg', height: 550, url: '#' },
+    { id: '33', img: '/assets/gallery/starlux/33.jpg', height: 480, url: '#' },
+    { id: '34', img: '/assets/gallery/starlux/34.jpg', height: 550, url: '#' },
+    { id: '35', img: '/assets/gallery/starlux/35.jpg', height: 600, url: '#' },
+    { id: '36', img: '/assets/gallery/starlux/36.jpg', height: 500, url: '#' },
+    { id: '37', img: '/assets/gallery/starlux/37.jpg', height: 450, url: '#' },
+    { id: '38', img: '/assets/gallery/starlux/38.jpg', height: 600, url: '#' },
+    { id: '39', img: '/assets/gallery/starlux/39.jpg', height: 550, url: '#' },
+    { id: '40', img: '/assets/gallery/starlux/40.jpg', height: 500, url: '#' },
+    { id: '41', img: '/assets/gallery/starlux/41.jpg', height: 650, url: '#' },
+    { id: '42', img: '/assets/gallery/starlux/42.jpg', height: 550, url: '#' },
+    { id: '43', img: '/assets/gallery/starlux/43.jpg', height: 500, url: '#' },
+    { id: '44', img: '/assets/gallery/starlux/44.jpg', height: 600, url: '#' },
+    { id: '45', img: '/assets/gallery/starlux/45.jpg', height: 450, url: '#' },
+    { id: '46', img: '/assets/gallery/starlux/46.jpg', height: 550, url: '#' },
+    { id: '47', img: '/assets/gallery/starlux/47.jpg', height: 500, url: '#' },
+    { id: '48', img: '/assets/gallery/starlux/48.jpg', height: 600, url: '#' },
+    { id: '49', img: '/assets/gallery/starlux/49.jpg', height: 550, url: '#' }
   ];
+
+  // Shuffle the gallery images for random display order
+  const shuffledGalleryImages = [...galleryImages].sort(() => Math.random() - 0.5);
 
   return (
     <div className="space-y-16">
@@ -107,11 +109,18 @@ export default function StarluxMallPage() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&h=1080&fit=crop')`
+            backgroundImage: `url('/assets/gallery/starlux/1.jpg')`
           }}
         />
         <div className="absolute inset-0 bg-black/50 hero-overlay" />
         <div className="relative z-10 text-center text-white px-4">
+          <div className="mb-6 flex justify-center">
+            <img 
+              src="/assets/gallery/starlux/logo.png" 
+              alt="CyberX Gaming Logo" 
+              className="h-36 w-auto md:h-36 lg:h-36 object-contain drop-shadow-2xl transition-all duration-300 ease-in-out "
+            />
+          </div>
           <ScrollReveal 
             element="h1" 
             containerClassName="mb-6"
@@ -140,8 +149,15 @@ export default function StarluxMallPage() {
       {sections.map((section, index) => (
         <section key={index} className="container mx-auto px-4 py-16">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div className={`rounded-xl overflow-hidden shadow-2xl ${index % 2 !== 0 ? 'md:order-last' : ''}`}>
-                    <Image src={section.image} alt={section.title} width={600} height={500} data-ai-hint={section.imageHint} className="w-full h-full object-cover" />
+                <div className={`${index % 2 !== 0 ? 'md:order-last' : ''}`}>
+                    <ScrollImage 
+                      src={section.image} 
+                      alt={section.title} 
+                      width={480} 
+                      height={360} 
+                      data-ai-hint={section.imageHint}
+                      className="w-full h-full"
+                    />
                 </div>
                 <div className="space-y-6">
                     <div className="flex items-center gap-4">

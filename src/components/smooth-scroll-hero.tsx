@@ -96,20 +96,20 @@ export default function SmoothScrollHero() {
       <div className="hero-images">
         <img 
           className="parallax-img"
-          data-speed="1.5"
-          src="https://images.unsplash.com/photo-1530569673472-307dc017a82d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODM2NTUwMDA&ixlib=rb-4.0.3&q=80&w=400"
+          data-speed="0.5"
+          src="/assets/gallery/cyberx/cover.jpg"
           alt="Orlando Global Hub"
         />
         <img 
           className="parallax-img"
-          data-speed="0.5"
-          src="https://images.unsplash.com/photo-1439853949127-fa647821eba0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODM2NTQ5Njk&ixlib=rb-4.0.3&q=80&w=400"
+          data-speed="1.5"
+          src="/assets/gallery/starlux/2.jpg"
           alt="Orlando Global Hub"
         />
         <img 
           className="parallax-img"
           data-speed="1.0"
-          src="/assets/gallery/cyberx/cover.jpg"
+          src="/assets/gallery/shopandcoffee/1.jpg"
           alt="Orlando Global Hub"
         />
         {/* <img 

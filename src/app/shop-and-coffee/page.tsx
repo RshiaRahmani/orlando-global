@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Masonry from '@/components/masonry';
 import GoogleMap from '@/components/google-map';
 import ScrollReveal from '@/components/scroll-reveal';
+import ScrollImage from '@/components/scroll-image';
 import { useApp } from '@/hooks/use-app';
 import { translations } from '@/lib/translations';
 import { Coffee, ShoppingBag, Utensils, Wifi, MapPin, Clock, Phone, CheckCircle, CalendarDays } from 'lucide-react';
@@ -15,40 +16,123 @@ export default function ShopAndCoffeePage() {
   const galleryImages = [
     { 
       id: '1', 
-      img: 'https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&h=500&fit=crop', 
+      img: '/assets/gallery/shopandcoffee/1.jpg', 
       height: 500, 
       url: '#' 
     },
     { 
       id: '2', 
-      img: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&h=400&fit=crop', 
+      img: '/assets/gallery/shopandcoffee/2.jpg', 
       height: 400, 
       url: '#' 
     },
     { 
       id: '3', 
-      img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=600&fit=crop', 
+      img: '/assets/gallery/shopandcoffee/3.jpg', 
       height: 600, 
       url: '#' 
     },
     { 
       id: '4', 
-      img: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&h=450&fit=crop', 
+      img: '/assets/gallery/shopandcoffee/4.jpg', 
       height: 450, 
       url: '#' 
     },
     { 
       id: '5', 
-      img: 'https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&h=550&fit=crop', 
+      img: '/assets/gallery/shopandcoffee/5.jpg', 
       height: 550, 
       url: '#' 
     },
     { 
       id: '6', 
-      img: 'https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600&h=400&fit=crop', 
+      img: '/assets/gallery/shopandcoffee/6.jpg', 
       height: 400, 
       url: '#' 
     },
+    { 
+      id: '7', 
+      img: '/assets/gallery/shopandcoffee/7.jpg', 
+      height: 500, 
+      url: '#' 
+    },
+    { 
+      id: '8', 
+      img: '/assets/gallery/shopandcoffee/8.jpg', 
+      height: 600, 
+      url: '#' 
+    },
+    { 
+      id: '9', 
+      img: '/assets/gallery/shopandcoffee/9.jpg', 
+      height: 500, 
+      url: '#' 
+    },
+    { 
+      id: '10', 
+      img: '/assets/gallery/shopandcoffee/10.jpg', 
+      height: 600, 
+      url: '#' 
+    },
+    { 
+      id: '11', 
+      img: '/assets/gallery/shopandcoffee/11.jpg', 
+      height: 500, 
+      url: '#' 
+    },
+    { 
+      id: '12', 
+      img: '/assets/gallery/shopandcoffee/12.jpg', 
+      height: 600, 
+      url: '#' 
+    }
+    ,
+    { 
+      id: '13', 
+      img: '/assets/gallery/shopandcoffee/13.jpg', 
+      height: 550, 
+      url: '#' 
+    },
+    { 
+      id: '14', 
+      img: '/assets/gallery/shopandcoffee/14.jpg', 
+      height: 500, 
+      url: '#' 
+    },
+    { 
+      id: '15', 
+      img: '/assets/gallery/shopandcoffee/15.jpg', 
+      height: 400, 
+      url: '#' 
+    },
+    { 
+      id: '16', 
+      img: '/assets/gallery/shopandcoffee/16.jpg', 
+      height: 450, 
+      url: '#' 
+    }
+    ,
+    { 
+      id: '17', 
+      img: '/assets/gallery/shopandcoffee/17.jpg', 
+      height: 550, 
+      url: '#' 
+    },
+    { 
+      id: '18', 
+      img: '/assets/gallery/shopandcoffee/18.jpg', 
+      height: 600, 
+      url: '#' 
+    },
+    { 
+      id: '19', 
+      img: '/assets/gallery/shopandcoffee/19.jpg', 
+      height: 500, 
+      url: '#' 
+    },
+
+
+
   ];
 
   return (
@@ -58,11 +142,18 @@ export default function ShopAndCoffeePage() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1920&h=1080&fit=crop')`
+            backgroundImage: `url('/assets/gallery/shopandcoffee/18~`.jpg')`
           }}
         />
         <div className="absolute inset-0 bg-black/50 hero-overlay" />
         <div className="relative z-10 text-center text-white px-4">
+          <div className="mb-6 flex justify-center">
+            <img 
+              src="/assets/gallery/shopandcoffee/logo.png" 
+              alt="CyberX Gaming Logo" 
+              className="h-16 w-auto md:h-16 lg:h-16 object-contain drop-shadow-2xl transition-all duration-300 ease-in-out "
+            />
+          </div>
           <ScrollReveal 
             element="h1" 
             containerClassName="mb-6"
@@ -111,9 +202,14 @@ export default function ShopAndCoffeePage() {
               ))}
             </ul>
           </div>
-          <div className="rounded-xl overflow-hidden shadow-2xl">
-            <Image src="https://placehold.co/600x500.png" alt="Cozy Cafe" width={600} height={500} className="w-full h-full object-cover" data-ai-hint="cozy coffee shop" />
-          </div>
+          <ScrollImage 
+            src="/assets/gallery/shopandcoffee/5.jpg" 
+            alt="Cozy Cafe" 
+            width={480} 
+            height={360} 
+            data-ai-hint="cozy coffee shop"
+            className="w-full h-full"
+          />
         </div>
       </section>
       
@@ -122,7 +218,14 @@ export default function ShopAndCoffeePage() {
             <Card className="overflow-hidden shadow-lg border-0 rounded-xl">
               <div className="grid md:grid-cols-5 items-center">
                 <div className="md:col-span-2">
-                   <Image src="https://placehold.co/600x500.png" alt="Community Event" width={600} height={500} className="w-full h-full object-cover" data-ai-hint="live music coffee shop" />
+                   <ScrollImage 
+                     src="https://placehold.co/600x500.png" 
+                     alt="Community Event" 
+                     width={480} 
+                     height={360} 
+                     data-ai-hint="live music coffee shop"
+                     className="w-full h-full"
+                   />
                 </div>
                 <div className="md:col-span-3 p-8 md:p-12">
                     <CardHeader className="p-0 mb-4">

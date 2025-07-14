@@ -2,6 +2,7 @@
 import Masonry from '@/components/masonry';
 import GoogleMap from '@/components/google-map';
 import ScrollReveal from '@/components/scroll-reveal';
+import ScrollImage from '@/components/scroll-image';
 import { useApp } from '@/hooks/use-app';
 import { translations } from '@/lib/translations';
 import { CheckCircle, MapPin, Clock, Phone } from 'lucide-react';
@@ -183,10 +184,14 @@ export default function CyberXGamingPage() {
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="rounded-xl overflow-hidden shadow-2xl">
-             <img src="https://placehold.co/600x500.png" alt="Gaming Club Interior" className="w-full h-full object-cover" data-ai-hint="gaming computers neon" />
-          </div>
+          </div>          <ScrollImage 
+            src="/assets/gallery/cyberx/8.jpg" 
+            alt="Gaming Club Interior" 
+            width={480} 
+            height={360} 
+            data-ai-hint="gaming computers neon"
+            className="w-full h-full"
+          />
         </div>
         
         {/* Location Section */}
