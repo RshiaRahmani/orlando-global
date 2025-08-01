@@ -20,9 +20,9 @@ export default function Footer() {
   ];
   
   const socialLinks = [
-    { href: '#', icon: <Facebook /> },
+    { href: 'https://www.facebook.com/orlandoshopandcoffee/', icon: <Facebook /> },
     { href: '#', icon: <Twitter /> },
-    { href: '#', icon: <Instagram /> },
+    { href: 'https://www.instagram.com/orlando_shopandcoffee/?hl=en', icon: <Instagram /> },
   ]
 
   return (
@@ -65,7 +65,7 @@ export default function Footer() {
                 </h3>
                 <div className="text-muted-foreground space-y-1 text-center md:text-left">
                     <p className="text-sm md:text-base">Kyrenia, North Cyprus</p>
-                    <p className="text-sm md:text-base">+90 555 123 4567</p>
+                    <p className="text-sm md:text-base">+90 533 873 83 71</p>
                     <p className="text-sm md:text-base">info@orlandoglobal.com</p>
                 </div>
                 <div className="flex justify-center md:justify-start space-x-1 pt-2">
@@ -90,14 +90,14 @@ export default function Footer() {
                 <h3 className="font-bold text-lg font-headline">{t.footer.ourLocation}</h3>
                 <div className="overflow-hidden rounded-lg shadow-md">
                     <iframe 
-                        src={`https://maps.google.com/maps?q=35.337,33.319&z=15&output=embed&t=q&hl=${language}`}
+                        src={`https://maps.google.com/maps?q=Starlux Cinema,35.3422161,33.2735431&z=17&output=embed&t=q&hl=${language}`}
                         width="100%" 
                         height="200" 
                         style={{border:0}} 
                         allowFullScreen
                         loading="lazy" 
                         referrerPolicy="no-referrer-when-downgrade"
-                        title="Orlando Global Location"
+                        title="Starlux Cinema - Orlando Global Location"
                     ></iframe>
                 </div>
             </div>
@@ -108,21 +108,31 @@ export default function Footer() {
             <h3 className="font-bold text-base font-headline text-center">{t.footer.ourLocation}</h3>
             <div className="overflow-hidden rounded-lg shadow-md">
                 <iframe 
-                    src={`https://maps.google.com/maps?q=35.337,33.319&z=15&output=embed&t=q&hl=${language}`}
+                    src={`https://maps.google.com/maps?q=Starlux Cinema,35.3422161,33.2735431&z=17&output=embed&t=q&hl=${language}`}
                     width="100%" 
                     height="150" 
                     style={{border:0}} 
                     allowFullScreen
                     loading="lazy" 
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Orlando Global Location"
+                    title="Starlux Cinema - Orlando Global Location"
                 ></iframe>
             </div>
         </div>
         
         {/* Copyright */}
         <div className="border-t pt-4 md:pt-6 mt-6 md:mt-8 text-center text-muted-foreground text-xs md:text-sm">
-            <p>&copy; {new Date().getFullYear()} Orlando Global. {t.footer.rights}</p>
+            <p>
+                &copy; {new Date().getFullYear()} Orlando Global. {t.footer.rights} | Design and developed by{' '}
+                <a 
+                    href="https://t.me/Sachima" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 transition-colors"
+                >
+                    Arshia Rahmani
+                </a>
+            </p>
         </div>
       </div>
     </footer>

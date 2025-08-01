@@ -142,7 +142,7 @@ export default function ShopAndCoffeePage() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/assets/gallery/shopandcoffee/18~`.jpg')`
+            backgroundImage: `url('/assets/gallery/shopandcoffee/18.jpg')`
           }}
         />
         <div className="absolute inset-0 bg-black/50 hero-overlay" />
@@ -205,8 +205,8 @@ export default function ShopAndCoffeePage() {
           <ScrollImage 
             src="/assets/gallery/shopandcoffee/5.jpg" 
             alt="Cozy Cafe" 
-            width={480} 
-            height={360} 
+            width={400} 
+            height={300} 
             data-ai-hint="cozy coffee shop"
             className="w-full h-full"
           />
@@ -219,10 +219,10 @@ export default function ShopAndCoffeePage() {
               <div className="grid md:grid-cols-5 items-center">
                 <div className="md:col-span-2">
                    <ScrollImage 
-                     src="https://placehold.co/600x500.png" 
+                     src="/assets/gallery/shopandcoffee/2.jpg" 
                      alt="Community Event" 
-                     width={480} 
-                     height={360} 
+                     width={400} 
+                     height={300} 
                      data-ai-hint="live music coffee shop"
                      className="w-full h-full"
                    />
@@ -295,7 +295,7 @@ export default function ShopAndCoffeePage() {
               </div>
               
               <GoogleMap 
-                location="Orlando Shop & Coffee, Famagusta, Cyprus"
+                location={t.location.address}
                 title="Orlando Shop & Coffee Location"
                 className="w-full h-64"
               />

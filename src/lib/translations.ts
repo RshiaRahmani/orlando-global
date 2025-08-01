@@ -34,9 +34,9 @@ export const translations = {
         galleryTitle: 'Starlux Gallery',
         location: {
           title: 'Visit Us',
-          address: 'Starlux Orlando Mall, Kyrenia',
-          details: 'Located in the vibrant center of Kyrenia, offering premium entertainment and dining experiences.',
-          hours: 'Open Daily: 9:00 AM - 11:00 PM',
+          address: 'Karaoğlanoğlu Caddesi, Karaoğlanoğlu 99320',
+          details: 'Located in the vibrant Karaoğlanoğlu area, offering premium entertainment and dining experiences.',
+          hours: 'Open Daily: 9:00 AM - 01:00 PM',
           contact: 'Contact for reservations and events',
           labels: {
             address: 'Address',
@@ -72,9 +72,9 @@ export const translations = {
         galleryTitle: 'Shop & Coffee Gallery',
         location: {
           title: 'Visit Us',
-          address: 'Orlando Shop & Coffee, Famagusta',
+          address: 'İsmet İnönü Blv, Gazimağusa 99450',
           details: 'A cozy retreat in Famagusta where you can enjoy premium coffee and browse unique lifestyle products.',
-          hours: 'Open Daily: 7:00 AM - 9:00 PM',
+          hours: 'Open Daily: 12:00 AM - 00:00 PM',
           contact: 'Contact for special orders and events',
           labels: {
             address: 'Address',
@@ -94,9 +94,9 @@ export const translations = {
         galleryTitle: 'CyberX Gallery',
         location: {
           title: 'Visit Us',
-          address: 'CyberX Gaming Club, Kyrenia',
+          address: 'Akacan Elegance Elit Blok, Bener Hakki Hekeri Sokak, Dukkan 1, Girne 9300',
           details: 'Located in the heart of Kyrenia, our gaming club is easily accessible and features state-of-the-art facilities.',
-          hours: 'Open Daily: 10:00 AM - 2:00 AM',
+          hours: 'Open Daily: 24/7',
           contact: 'Contact for more information',
           labels: {
             address: 'Address',
@@ -122,9 +122,9 @@ export const translations = {
       },
       info: {
         title: 'Our Locations',
-        starlux: 'Starlux Orlando Mall, Kyrenia',
-        shopAndCoffee: 'Orlando Shop and Coffee, Famagusta',
-        cyberX: 'CyberX Gaming Club, Kyrenia',
+        starlux: 'Karaoğlanoğlu Caddesi, Karaoğlanoğlu 99320',
+        shopAndCoffee: 'İsmet İnönü Blv, Gazimağusa 99450',
+        cyberX: 'Akacan Elegance Elit Blok, Bener Hakki Hekeri Sokak, Dukkan 1, Girne 9300',
       }
     },
     footer: {
@@ -168,9 +168,9 @@ export const translations = {
         galleryTitle: 'Галерея Starlux',
         location: {
           title: 'Посетите Нас',
-          address: 'Starlux Orlando Mall, Кирения',
-          details: 'Расположен в оживленном центре Киринии, предлагая премиальные развлечения и рестораны.',
-          hours: 'Открыто ежедневно: 9:00 - 23:00',
+          address: 'Karaoğlanoğlu Caddesi, Karaoğlanoğlu 99320',
+          details: 'Расположен в оживленном районе Караоглануглу, предлагая премиальные развлечения и рестораны.',
+          hours: 'Открыто ежедневно: 9:00 - 01:00',
           contact: 'Свяжитесь для бронирования и мероприятий',
           labels: {
             address: 'Адрес',
@@ -206,9 +206,9 @@ export const translations = {
         galleryTitle: 'Галерея Магазина и Кофе',
         location: {
           title: 'Посетите Нас',
-          address: 'Orlando Магазин и Кофе, Фамагуста',
+          address: 'İsmet İnönü Blv, Gazimağusa 99450',
           details: 'Уютное убежище в Фамагусте, где вы можете насладиться превосходным кофе и просмотреть уникальные товары для жизни.',
-          hours: 'Открыто ежедневно: 7:00 - 21:00',
+          hours: 'Открыто ежедневно: 12:00 - 00:00',
           contact: 'Свяжитесь для специальных заказов и мероприятий',
           labels: {
             address: 'Адрес',
@@ -228,9 +228,9 @@ export const translations = {
         galleryTitle: 'Галерея CyberX',
         location: {
           title: 'Посетите Нас',
-          address: 'Игровой Клуб CyberX, Кирения',
+          address: 'Akacan Elegance Elit Blok, Bener Hakki Hekeri Sokak, Dukkan 1, Girne 9300',
           details: 'Расположен в сердце Киринии, наш игровой клуб легко доступен и оснащен самым современным оборудованием.',
-          hours: 'Открыто ежедневно: 10:00 - 2:00',
+          hours: 'Открыто ежедневно: 24/7',
           contact: 'Свяжитесь для дополнительной информации',
           labels: {
             address: 'Адрес',
@@ -256,9 +256,9 @@ export const translations = {
       },
       info: {
         title: 'Наши Адреса',
-        starlux: 'Starlux Orlando Mall, Кирения',
-        shopAndCoffee: 'Orlando Магазин и Кофе, Фамагуста',
-        cyberX: 'Игровой Клуб CyberX, Кирения',
+        starlux: 'Karaoğlanoğlu Caddesi, Karaoğlanoğlu 99320',
+        shopAndCoffee: 'İsmet İnönü Blv, Gazimağusa 99450',
+        cyberX: 'Akacan Elegance Elit Blok, Bener Hakki Hekeri Sokak, Dukkan 1, Girne 9300',
       }
     },
     footer: {
@@ -302,9 +302,9 @@ export const translations = {
         galleryTitle: 'Starlux Galerisi',
         location: {
           title: 'Bizi Ziyaret Edin',
-          address: 'Starlux Orlando AVM, Girne',
-          details: 'Girne\'nin canlı merkezinde bulunan, premium eğlence ve yemek deneyimleri sunan mekanımız.',
-          hours: 'Her Gün Açık: 09:00 - 23:00',
+          address: 'Karaoğlanoğlu Caddesi, Karaoğlanoğlu 99320',
+          details: 'Karaoğlanoğlu\'nun canlı bölgesinde bulunan, premium eğlence ve yemek deneyimleri sunan mekanımız.',
+          hours: 'Her Gün Açık: 09:00 - 01:00',
           contact: 'Rezervasyon ve etkinlikler için iletişim',
           labels: {
             address: 'Adres',
@@ -340,9 +340,9 @@ export const translations = {
         galleryTitle: 'Mağaza & Kahve Galerisi',
         location: {
           title: 'Bizi Ziyaret Edin',
-          address: 'Orlando Mağaza & Kahve, Gazimağusa',
+          address: 'İsmet İnönü Blv, Gazimağusa 99450',
           details: 'Gazimağusa\'da premium kahve tadabileceğiniz ve benzersiz yaşam tarzı ürünlerine göz atabileceğiniz rahat bir sığınak.',
-          hours: 'Her Gün Açık: 07:00 - 21:00',
+          hours: 'Her Gün Açık: 12:00 - 00:00',
           contact: 'Özel siparişler ve etkinlikler için iletişim',
           labels: {
             address: 'Adres',
@@ -362,9 +362,9 @@ export const translations = {
         galleryTitle: 'CyberX Galerisi',
         location: {
           title: 'Bizi Ziyaret Edin',
-          address: 'CyberX Oyun Kulübü, Girne',
+          address: 'Akacan Elegance Elit Blok, Bener Hakki Hekeri Sokak, Dukkan 1, Girne 9300',
           details: 'Girne\'nin kalbinde bulunan oyun kulübümüz kolayca erişilebilir ve son teknoloji tesislere sahiptir.',
-          hours: 'Her Gün Açık: 10:00 - 02:00',
+          hours: 'Her Gün Açık: 24/7',
           contact: 'Daha fazla bilgi için iletişim',
           labels: {
             address: 'Adres',
@@ -390,9 +390,9 @@ export const translations = {
       },
       info: {
         title: 'Konumlarımız',
-        starlux: 'Starlux Orlando AVM, Girne',
-        shopAndCoffee: 'Orlando Mağaza & Kahve, Gazimağusa',
-        cyberX: 'CyberX Oyun Kulübü, Girne',
+        starlux: 'Karaoğlanoğlu Caddesi, Karaoğlanoğlu 99320',
+        shopAndCoffee: 'İsmet İnönü Blv, Gazimağusa 99450',
+        cyberX: 'Akacan Elegance Elit Blok, Bener Hakki Hekeri Sokak, Dukkan 1, Girne 9300',
       }
     },
     footer: {

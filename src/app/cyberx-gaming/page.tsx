@@ -187,8 +187,8 @@ export default function CyberXGamingPage() {
           </div>          <ScrollImage 
             src="/assets/gallery/cyberx/8.jpg" 
             alt="Gaming Club Interior" 
-            width={480} 
-            height={360} 
+            width={400} 
+            height={300} 
             data-ai-hint="gaming computers neon"
             className="w-full h-full"
           />
@@ -238,7 +238,7 @@ export default function CyberXGamingPage() {
                 </div>
                 
                 <GoogleMap 
-                  location="CyberX Gaming Club, Kyrenia, Cyprus"
+                  location={t.location.address}
                   title="CyberX Gaming Club Location"
                   className="w-full h-64"
                 />

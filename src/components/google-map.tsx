@@ -13,57 +13,43 @@ export default function GoogleMap({ location, title, className = "w-full h-64" }
   const { theme } = useApp();
 
   const mapUrl = useMemo(() => {
-    // Dark theme styles for Google Maps
-    const darkStyles = [
-      'feature:all|element:geometry|color:0x242f3e',
-      'feature:all|element:labels.text.stroke|color:0x242f3e',
-      'feature:all|element:labels.text.fill|color:0x746855',
-      'feature:administrative.locality|element:labels.text.fill|color:0xd59563',
-      'feature:poi|element:labels.text.fill|color:0xd59563',
-      'feature:poi.park|element:geometry|color:0x263c3f',
-      'feature:poi.park|element:labels.text.fill|color:0x6b9a76',
-      'feature:road|element:geometry|color:0x38414e',
-      'feature:road|element:geometry.stroke|color:0x212a37',
-      'feature:road|element:labels.text.fill|color:0x9ca5b3',
-      'feature:road.highway|element:geometry|color:0x746855',
-      'feature:road.highway|element:geometry.stroke|color:0x1f2835',
-      'feature:road.highway|element:labels.text.fill|color:0xf3d19c',
-      'feature:transit|element:geometry|color:0x2f3948',
-      'feature:transit.station|element:labels.text.fill|color:0xd59563',
-      'feature:water|element:geometry|color:0x17263c',
-      'feature:water|element:labels.text.fill|color:0x515c6d',
-      'feature:water|element:labels.text.stroke|color:0x17263c'
-    ];
-
-    // Light theme styles for Google Maps
-    const lightStyles = [
-      'feature:all|element:geometry|color:0xf5f5f5',
-      'feature:all|element:labels.text.fill|color:0x616161',
-      'feature:all|element:labels.text.stroke|color:0xffffff',
-      'feature:administrative|element:geometry|color:0xfefefe',
-      'feature:administrative.land_parcel|element:labels.text.fill|color:0xbdbdbd',
-      'feature:poi|element:geometry|color:0xeeeeee',
-      'feature:poi|element:labels.text.fill|color:0x757575',
-      'feature:poi.park|element:geometry|color:0xe5e5e5',
-      'feature:poi.park|element:labels.text.fill|color:0x9e9e9e',
-      'feature:road|element:geometry|color:0xffffff',
-      'feature:road.arterial|element:labels.text.fill|color:0x757575',
-      'feature:road.highway|element:geometry|color:0xdadada',
-      'feature:road.highway|element:labels.text.fill|color:0x616161',
-      'feature:road.local|element:labels.text.fill|color:0x9e9e9e',
-      'feature:transit.line|element:geometry|color:0xe5e5e5',
-      'feature:transit.station|element:geometry|color:0xeeeeee',
-      'feature:water|element:geometry|color:0xc9c9c9',
-      'feature:water|element:labels.text.fill|color:0x9e9e9e'
-    ];
-
-    const styles = theme === 'dark' ? darkStyles : lightStyles;
-    const styleParams = styles.map(style => `&style=${style}`).join('');
-
-    // Generate the embed URL for the location
-    const searchUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50000!2d33.3157894!3d35.3413886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14de1767ca494d55%3A0x324c3861a1894276!2s${encodeURIComponent(location)}!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s${styleParams}`;
+    // Use direct address search with proper encoding
+    let searchAddress = location;
+    let coordinates = '35.3413886,33.3157894'; // Default Cyprus coordinates
     
-    return searchUrl;
+    // Set specific search addresses and coordinates for each location
+    if (location.includes('Karaoğlanoğlu')) {
+      searchAddress = 'Starlux Cinema, Karaoğlanoğlu, Cyprus';
+      coordinates = '35.3422161,33.2735431';
+    } else if (location.includes('İsmet İnönü') || location.includes('Gazimağusa')) {
+      searchAddress = 'Orlando Shop And Coffee, Gazimağusa, Cyprus';
+      coordinates = '35.1409395,33.9147562';
+    } else if (location.includes('Bener Hakki Hekeri') || (location.includes('Girne') && location.includes('Akacan'))) {
+      searchAddress = 'Cyberx Kyrenia, 88J2+24 Girne, Cyprus';
+      coordinates = '35.3300108,33.3002793';
+    }
+
+    // Create a simple, reliable embed URL with more specific center coordinates
+    const encodedAddress = encodeURIComponent(searchAddress);
+    const [lat, lng] = coordinates.split(',');
+    
+    // Use specific place ID for each location if available, otherwise use coordinates
+    let mapUrl;
+    if (location.includes('Bener Hakki Hekeri') || (location.includes('Girne') && location.includes('Akacan'))) {
+      // Use the exact place ID from the Google Maps link for CyberX
+      mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500!2d${lng}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f18!3m3!1m2!1s0x14de139dae781193%3A0xdf0863a79bd470dc!2sCyberx%20Kyrenia!5e0!3m2!1sen!2s!4v${Date.now()}!5m2!1sen!2s`;
+    } else if (location.includes('Karaoğlanoğlu')) {
+      // Use the exact place ID from the Google Maps link for Starlux Cinema
+      mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500!2d${lng}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f18!3m3!1m2!1s0x14de12b3ce745a55%3A0x3a1ff9d50383bfa4!2sStarlux%20Cinema!5e0!3m2!1sen!2s!4v${Date.now()}!5m2!1sen!2s`;
+    } else if (location.includes('İsmet İnönü') || location.includes('Gazimağusa')) {
+      // Use the exact place ID from the Google Maps link for Orlando Shop And Coffee
+      mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500!2d${lng}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f18!3m3!1m2!1s0x14dfc9376746009f%3A0x65f281d2dee95d32!2sOrlando%20Shop%20And%20Coffee!5e0!3m2!1sen!2s!4v${Date.now()}!5m2!1sen!2s`;
+    } else {
+      // Use coordinates for precise centering and include the address as a search query
+      mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1000!2d${lng}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f17.5!3m3!1m2!1s0x0%3A0x0!2s${encodedAddress}!5e0!3m2!1sen!2s!4v${Date.now()}!5m2!1sen!2s&z=18`;
+    }
+    
+    return mapUrl;
   }, [location, theme]);
 
   return (
@@ -73,7 +59,11 @@ export default function GoogleMap({ location, title, className = "w-full h-64" }
         src={mapUrl}
         width="100%"
         height="100%"
-        style={{ border: 0 }}
+        style={{ 
+          border: 0,
+          filter: theme === 'dark' ? 'invert(0.9) hue-rotate(180deg)' : 'none',
+          transition: 'filter 0.3s ease'
+        }}
         allowFullScreen={true}
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"

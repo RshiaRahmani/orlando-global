@@ -41,32 +41,32 @@ export default function Home() {
 
   const galleryImages = [
     {
-      src: "https://placehold.co/600x400.png",
+      src: "/assets/gallery/shopandcoffee/10.jpg",
       alt: "Starlux Mall",
       hint: "cinema movie theater",
     },
     {
-      src: "https://placehold.co/600x400.png",
+      src: "/assets/gallery/starlux/13.jpg",
       alt: "Las Vegas Bar",
       hint: "cocktail bar",
     },
     {
-      src: "https://placehold.co/600x400.png",
+      src: "/assets/gallery/cyberx/8.jpg",
       alt: "Orlando Coffee",
       hint: "latte art",
     },
     {
-      src: "https://placehold.co/600x400.png",
+      src: "/assets/gallery/cyberx/12.jpg",
       alt: "CyberX Gaming",
       hint: "esports competition",
     },
     {
-      src: "https://placehold.co/600x400.png",
+      src: "/assets/gallery/shopandcoffee/6.jpg",
       alt: "Kids Room",
       hint: "children playground",
     },
     {
-      src: "https://placehold.co/600x400.png",
+      src: "/assets/gallery/starlux/27.jpg",
       alt: "VR Arena",
       hint: "virtual reality",
     },

@@ -153,8 +153,8 @@ export default function StarluxMallPage() {
                     <ScrollImage 
                       src={section.image} 
                       alt={section.title} 
-                      width={480} 
-                      height={360} 
+                      width={400} 
+                      height={300} 
                       data-ai-hint={section.imageHint}
                       className="w-full h-full"
                     />
@@ -234,7 +234,7 @@ export default function StarluxMallPage() {
               </div>
               
               <GoogleMap 
-                location="Starlux Orlando Mall, Kyrenia, Cyprus"
+                location={t.location.address}
                 title="Starlux Orlando Mall Location"
                 className="w-full h-64"
               />
