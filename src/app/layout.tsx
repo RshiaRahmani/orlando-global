@@ -6,9 +6,25 @@ import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
   title: 'Orlando Global Hub',
-  description: 'Welcome to Orlando Global',
+  description: 'Welcome to Orlando Global - Entertainment, Coffee, Gaming in Cyprus',
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      {
+        url: '/assets/logos/orlandoGlobal/Logo.png',
+        sizes: '32x32',
+        type: 'image/png',
+      },
+      {
+        url: '/assets/logos/orlandoGlobal/Logo.png',
+        sizes: '16x16',
+        type: 'image/png',
+      }
+    ],
+    apple: {
+      url: '/assets/logos/orlandoGlobal/Logo.png',
+      sizes: '180x180',
+      type: 'image/png',
+    },
   },
 };
 

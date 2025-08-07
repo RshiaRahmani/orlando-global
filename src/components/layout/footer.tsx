@@ -65,7 +65,7 @@ export default function Footer() {
                 </h3>
                 <div className="text-muted-foreground space-y-1 text-center md:text-left">
                     <p className="text-sm md:text-base">Kyrenia, North Cyprus</p>
-                    <p className="text-sm md:text-base">+90 533 873 83 71</p>
+                    <p className="text-sm md:text-base">+90 533 830 5349</p>
                     <p className="text-sm md:text-base">info@orlandoglobal.com</p>
                 </div>
                 <div className="flex justify-center md:justify-start space-x-1 pt-2">
